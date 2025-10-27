@@ -1,15 +1,15 @@
 <!DOCTYPE html> <!-- defines HTML5 document -->
 <html lang="en"> <!-- This sets the document language -->
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" >
   <title>Outdoor Recreation in the Natural State: An Arkansas Adventure Guide</title> <!-- page title -->
-  <meta name="description" content=" An Arkansas adventure guide exploring the Buffalo National River, Ozarks, and outdoor recreation in The Natural State." /> <!-- page description -->
-  <meta name="author" content="Thomas Wallace" /> <!-- author -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- This is a responsive design -->
+  <meta name="description" content=" An Arkansas adventure guide exploring the Buffalo National River, Ozarks, and outdoor recreation in The Natural State." > <!-- page description -->
+  <meta name="author" content="Thomas Wallace" > <!-- author -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" > <!-- This is a responsive design -->
 </head>
 
 <body>
-  <a id="top" name="top"></a> <!--This is an anchor for Back to Top link -->
+  <a href="#top">Back to Top</a> <!--This is an anchor for Back to Top link -->
 
   <main>
     <header>
@@ -51,7 +51,7 @@
         <dd>A complete, end-to-end journey on a long-distance trail, often taking weeks or months.</dd>
       </dl>
       <figure>
-        <img src="[images/buffalo_national_river.jpg](https://en.wikipedia.org/wiki/File:Morning_on_the_Buffalo_River.jpg)" alt="Buffalo National River in Arkansas" title="Buffalo National River" width="800" height="450" />
+        <img src="https://en.wikipedia.org/wiki/File:Morning_on_the_Buffalo_River.jpg" alt="Buffalo National River in Arkansas" title="Buffalo National River" width="800" height="450" >
               <blockquote cite="https://en.wikipedia.org/wiki/Buffalo_National_River">
         “You haven’t truly seen Arkansas until you’ve floated under the towering cliffs of the Buffalo.”
       </blockquote>
