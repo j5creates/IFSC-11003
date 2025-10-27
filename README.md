@@ -119,6 +119,6 @@
     <footer>
       <h6>&copy; 2025 Thomas Wallace — <a href="mailto:thomas.wallace@example.com">Email me</a> — <a href="#top">Back to Top</a></h6>
     </footer>
-  </main> <!-- end of the main --->
+  </main>
 </body>
 </html>
