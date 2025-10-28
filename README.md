@@ -51,7 +51,7 @@
         <dd>A complete, end-to-end journey on a long-distance trail, often taking weeks or months.</dd>
       </dl>
       <figure>
-        <img src="https://en.wikipedia.org/wiki/File:Morning_on_the_Buffalo_River.jpg" alt="Buffalo National River in Arkansas" title="Buffalo National River" width="800" height="450" >
+        <img src=" https://upload.wikimedia.org/wikipedia/commons/f/f7/Morning_on_the_Buffalo_River.jpg" alt="Buffalo National River in Arkansas" title="Buffalo National River" width="800" height="450" >
               <blockquote cite="https://en.wikipedia.org/wiki/Buffalo_National_River">
         “You haven’t truly seen Arkansas until you’ve floated under the towering cliffs of the Buffalo.”
       </blockquote>
