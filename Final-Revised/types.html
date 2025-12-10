@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Types of Water</title>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Different Types of Water" />
+  <meta name="author" content="John Nunez" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Color Theme */
+:root {
+  --ocean-deep: #006994;
+  --ocean-blue: #0891b2;
+  --ocean-light: #06b6d4;
+  --aqua: #22d3ee;
+  --seafoam: #f0fdfa;
+  --white: #ffffff;
+  --text: #0c4a6e;
+  --border: #cffafe;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "lato", sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+header.primary {
+  background: linear-gradient(to bottom, var(--ocean-deep), var(--ocean-blue));
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+header.primary h1 a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+header.primary h1 a:hover {
+  color: var(--aqua);
+}
+
+header.primary h2 {
+  font-family: "Goldman", cursive;
+  font-size: 1.2rem;
+  margin: 1rem 0 2rem;
+  font-weight: 400;
+}
+
+/* Navigation */
+header.primary nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+header.primary nav a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+header.primary nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--aqua);
+}
+
+/* Content Section */
+section#content {
+  padding: 3rem 0;
+  background: var(--white);
+}
+
+section#content h2 {
+  font-family: "Goldman", cursive;
+  color: var(--ocean-blue);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+section#content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+/* Articles Section */
+section#articles {
+  background: var(--seafoam);
+  padding: 3rem 0;
+}
+
+section#articles .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+
+section#articles h2 {
+  grid-column: 1 / -1;
+  font-family: "Goldman", cursive;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--ocean-deep);
+}
+
+#articles article.post {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#articles article.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(8, 145, 178, 0.2);
+}
+
+#articles article.post figure {
+  overflow: hidden;
+}
+
+#articles article.post img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+#articles article.post:hover img {
+  transform: scale(1.08);
+}
+
+#articles article.post figcaption {
+  font-size: 0.85rem;
+  color: var(--ocean-blue);
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+}
+
+#articles article.post h2 {
+  font-size: 1.3rem;
+  text-align: left;
+  padding: 0 1.5rem;
+  margin: 0.5rem 0;
+}
+
+#articles article.post h2 a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#articles article.post h2 a:hover {
+  color: var(--ocean-blue);
+}
+
+#articles article.post li {
+  margin: 0 1.5rem 0.8rem 3rem;
+  line-height: 1.6;
+}
+/* Hero Section */
+#hero {
+  padding: 3rem 0;
+  background: var(--white);
+}
+
+#hero img {
+  border-radius: 8px;
+  margin: 0 auto;
+  transition: transform 0.4s;
+}
+
+#hero img:hover {
+  transform: scale(1.03);
+}
+
+/* Aside Section */
+aside {
+  background: var(--seafoam);
+  padding: 3rem 0;
+}
+
+aside > div {
+  display: grid;
+  gap: 2rem;
+}
+
+aside .widget {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.3s;
+}
+
+aside .widget:hover {
+  box-shadow: 0 4px 12px rgba(8, 145, 178, 0.15);
+}
+
+aside h2 {
+  color: var(--ocean-blue);
+  font-family: "Goldman", cursive;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+aside p {
+  line-height: 1.8;
+}
+
+aside table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+aside table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid var(--border);
+}
+
+aside table td:first-child {
+  font-weight: 600;
+  color: var(--text);
+}
+
+aside table tr:last-child td {
+  border-bottom: none;
+}
+
+aside table tr:hover {
+  background: var(--seafoam);
+}
+
+/* Footer */
+#colophon {
+  background: var(--ocean-deep);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem;
+}
+
+#colophon h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+#colophon a {
+  color: var(--aqua);
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+#colophon a:hover {
+  color: var(--aqua);
+}
+
+#colophon p {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+  </style>
+</head>
+<body>
+  <header role="banner" class="primary">
+    <h1><a href="index.html">Water</a></h1>
+    <h2>The Essential Element of Life</h2>
+    <nav role="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="types.html">Types</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="content" class="container">
+    <h2>Types of Water</h2>
+    <p>Water exists in many different forms and types on our planet. Each type has unique characteristics, sources, and uses. Understanding these different types of water helps us appreciate the diversity and complexity of this vital resource.</p>
+  </section>
+
+  <section id="articles">
+    <div class="container">
+      <h2>The Different Water Types</h2>
+      
+      <article class="post">
+          <img src="https://cdn.britannica.com/65/161665-050-C4B1FA75/Waves-North-Shore-Oahu-Hawaiian-Islands.jpg" alt="Ocean waves" />
+        <h3>Ocean Water (Salty Water)</h3>
+        <ul>
+          <li>Makes up about 97% of all water on Earth</li>
+          <li>Contains approximately 35 grams of salt per liter</li>
+          <li>Supports diverse marine ecosystems</li>
+          <li>Regulates global climate and weather patterns</li>
+          <li>Source of food, minerals, and energy resources</li>
+        </ul>
+      </article>
+
+      <article class="post">
+          <img src="https://static.albertafarmexpress.ca/wp-content/uploads/2018/07/water-FraserRiverBC-904647396-ChristinaPrinn-iStock-GettyImages.jpg" alt="Fresh water stream" />
+        <h3>Fresh Water</h3>
+        <ul>
+          <li>Contains less than 1% salinity</li>
+          <li>Represents only 2.5% of Earth's total water</li>
+          <li>Found in rivers, lakes, streams, and ponds</li>
+          <li>Essential for drinking, cooking, and sanitation</li>
+          <li>Used extensively in agriculture and industry</li>
+        </ul>
+      </article>
+
+      <article class="post">
+
+          <img src="https://groundwater.uark.edu/files/2020/08/adam-edgerton-SvLvtZTFRzM-unsplash.jpg" alt="Groundwater" />
+        <h3>Groundwater</h3>
+        <ul>
+          <li>Water stored beneath Earth's surface</li>
+          <li>Stored in underground aquifers and rock formations</li>
+          <li>Accessed through wells and natural springs</li>
+          <li>Naturally filtered by soil and rock layers</li>
+          <li>Accounts for about 30% of world's fresh water</li>
+        </ul>
+      </article>
+
+      <article class="post">
+          <img src="https://www.campervaniceland.com/assets/img/blog/261/valley-glacier-iceland.jpg" alt="Glacier" />
+        <h3>Glacial Water</h3>
+        <ul>
+          <li>Frozen fresh water in glaciers and ice sheets</li>
+          <li>Found in polar ice caps and mountain glaciers</li>
+          <li>Melts seasonally to feed rivers and lakes</li>
+          <li>Reflects sunlight, regulating Earth's temperature</li>
+          <li>Acts as long-term storage of fresh water</li>
+        </ul>
+      </article>
+
+      <article class="post">
+          <img src="https://img.freepik.com/premium-photo/garden-rainwater-harvesting-system-with-barrel-ecological-water-reuse-concept_939992-9710.jpg" alt="Rainwater" />
+        <h3>Rainwater</h3>
+        <ul>
+          <li>Precipitation that falls from clouds</li>
+          <li>Naturally distilled through water cycle</li>
+          <li>Part of the natural water cycle</li>
+          <li>Replenishes rivers, lakes, and groundwater</li>
+          <li>Can be collected and used for various purposes</li>
+        </ul>
+      </article>
+
+      <article class="post">
+          <img src="https://aquapap.com/wp-content/uploads/2022/05/what-is-purified-water-min-2.jpg" alt="Purified water" />
+        <h3>Purified Water</h3>
+        <ul>
+          <li>Processed to remove impurities and contaminants</li>
+          <li>Methods include distillation and reverse osmosis</li>
+          <li>Treated to remove chemicals and bacteria</li>
+          <li>Safe for drinking and cooking</li>
+          <li>Used in medical and laboratory settings</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <aside role="complementary">
+    <div class="container">
+      <article class="widget">
+        <h2>Water Distribution</h2>
+        <p>Understanding how water is distributed across our planet helps us appreciate its scarcity and the importance of conservation.</p>
+      </article>
+      
+      <article class="widget">
+        <h2>Water Distribution Facts</h2>
+        <table>
+          <tr>
+            <td>Ocean Water</td>
+            <td>97%</td>
+          </tr>
+          <tr>
+            <td>Fresh Water</td>
+            <td>2.5%</td>
+          </tr>
+          <tr>
+            <td>Glaciers & Ice Caps</td>
+            <td>68.7%</td>
+          </tr>
+          <tr>
+            <td>Groundwater</td>
+            <td>30.1%</td>
+          </tr>
+          <tr>
+            <td>Surface Water</td>
+            <td>0.3%</td>
+          </tr>
+        </table>
+      </article>
+    </div>
+  </aside>
+
+  <footer id="colophon" role="contentinfo">
+    <h6>&copy; 2025 John Nunez | <a href="mailto:jnunez@ualr.edu">Report a Problem</a></h6>
+    <p>This website was created for educational purposes to promote water awareness.</p>
+  </footer>
+</body>
+</html>

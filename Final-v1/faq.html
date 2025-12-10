@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FAQ - Water: The Essential Element</title>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Frequently Asked Questions About Water" />
+  <meta name="author" content="John Nunez" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ocean-deep: #006994;
+      --ocean-blue: #0891b2;
+      --ocean-light: #06b6d4;
+      --aqua: #22d3ee;
+      --seafoam: #f0fdfa;
+      --white: #ffffff;
+      --text: #0c4a6e;
+      --border: #cffafe;
+    }
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "lato", sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    /* Header */
+    header.primary {
+      background: linear-gradient(to bottom, var(--ocean-deep), var(--ocean-blue));
+      color: var(--white);
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+    header.primary h1 a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 2.5rem;
+      font-weight: 700;
+      transition: color 0.3s;
+    }
+    header.primary h1 a:hover {
+      color: var(--aqua);
+    }
+    header.primary h2 {
+      font-family: "Goldman", cursive;
+      font-size: 1.2rem;
+      margin: 1rem 0 2rem;
+      font-weight: 400;
+    }
+    /* Navigation */
+    header.primary nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    header.primary nav a {
+      color: var(--white);
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+    header.primary nav a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--aqua);
+    }
+    /* Content Section */
+    section#content {
+      padding: 3rem 0;
+      background: var(--white);
+    }
+    section#content h2 {
+      font-family: "Goldman", cursive;
+      color: var(--ocean-blue);
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    section#content p {
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+    /* FAQ Section */
+    #faq-section {
+      background: var(--seafoam);
+      padding: 3rem 0;
+    }
+    .faq-grid {
+      display: grid;
+      gap: 2rem;
+    }
+    .faq-card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      transition: box-shadow 0.3s;
+    }
+    .faq-card:hover {
+      box-shadow: 0 4px 12px rgba(8, 145, 178, 0.15);
+    }
+    .faq-q {
+      font-weight: 700;
+      color: var(--text);
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+    .faq-q::before {
+      content: "Q";
+      background: var(--ocean-blue);
+      color: var(--white);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      flex-shrink: 0;
+      font-size: 0.95rem;
+    }
+    .faq-a {
+      color: var(--text);
+      line-height: 1.8;
+      padding-left: 40px;
+    }
+    /* Footer */
+    #colophon {
+      background: var(--ocean-deep);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem;
+    }
+    #colophon h6 {
+      margin-bottom: 0.5rem;
+      font-weight: 400;
+    }
+    #colophon a {
+      color: var(--aqua);
+      text-decoration: underline;
+      transition: color 0.3s;
+    }
+    #colophon a:hover {
+      color: var(--aqua);
+    }
+    #colophon p {
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header role="banner" class="primary">
+    <h1><a href="index.html">Water</a></h1>
+    <h2>The Essential Element of Life</h2>
+    <nav role="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="types.html">Types</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="content" class="container">
+    <h2>Common Water Questions</h2>
+    <p>Got questions about water? You're in the right place. From the science behind H₂O to practical conservation tips, we've got answers to the most common questions about Earth's most vital resource.</p>
+  </section>
+  <section id="faq-section">
+    <div class="container">
+      <div class="faq-grid">
+        
+        <div class="faq-card">
+          <div class="faq-q">What percentage of Earth's water is actually drinkable?</div>
+          <div class="faq-a">Only 2.5% of Earth's water is fresh water, and most of that is trapped in glaciers and ice caps. Less than 1% of all water on Earth is readily accessible for human use.</div>
+        </div>
+        <div class="faq-card">
+          <div class="faq-q">Why does ice float instead of sink?</div>
+          <div class="faq-a">Water expands when it freezes, making ice less dense than liquid water. This unique property is crucial for aquatic ecosystems, allowing lakes to freeze from the top down and protecting life below.</div>
+        </div>
+        <div class="faq-card">
+          <div class="faq-q">How much water should I drink daily?</div>
+       <div class="faq-a">While the "8 glasses a day" rule is popular, actual needs vary by body size, activity level, and climate. A good rule is to drink when thirsty and monitor urine color—pale yellow indicates good hydration.</div>
+        </div>
+  </section>
+  <footer id="colophon" role="contentinfo">
+    <h6>&copy; 2025 John Nunez | <a href="jnunez@ualr.edu">Report a Problem</a></h6>
+  </footer>
+</body>
+</html>

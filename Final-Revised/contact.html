@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Contact Us - Final project draft v1</title>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Contact Water Information" />
+  <meta name="author" content="John Nunez" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <style>
+/* Color Theme */
+:root {
+  --ocean-deep: #006994;
+  --ocean-blue: #0891b2;
+  --ocean-light: #06b6d4;
+  --aqua: #22d3ee;
+  --seafoam: #f0fdfa;
+  --white: #ffffff;
+  --text: #0c4a6e;
+  --border: #cffafe;
+}
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "lato", sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+/* Header */
+header.primary {
+  background: linear-gradient(to bottom, var(--ocean-deep), var(--ocean-blue));
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 2rem;
+}
+header.primary h1 a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+header.primary h1 a:hover {
+  color: var(--aqua);
+}
+header.primary h2 {
+  font-family: "Goldman", cursive;
+  font-size: 1.2rem;
+  margin: 1rem 0 2rem;
+  font-weight: 400;
+}
+/* Navigation */
+header.primary nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+header.primary nav a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+header.primary nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--aqua);
+}
+/* Content Section */
+section#content {
+  padding: 3rem 0;
+  background: var(--white);
+}
+section#content h2 {
+  font-family: "Goldman", cursive;
+  color: var(--ocean-blue);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+section#content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+/* Contact Form */
+#contact-form {
+  background: var(--seafoam);
+  padding: 3rem 0;
+}
+#contact-form h2 {
+  font-family: "Goldman", cursive;
+  color: var(--ocean-deep);
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+form {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  max-width: 600px;
+  margin: 0 auto;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text);
+}
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--ocean-blue);
+}
+textarea {
+  resize: vertical;
+}
+.submit-button {
+  background: var(--ocean-blue);
+  color: var(--white);
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+}
+.submit-button:hover {
+  background: var(--ocean-deep);
+}
+/* Aside Section */
+aside {
+  background: var(--seafoam);
+  padding: 3rem 0;
+}
+aside > div {
+  display: grid;
+  gap: 2rem;
+}
+aside .widget {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.3s;
+}
+aside .widget:hover {
+  box-shadow: 0 4px 12px rgba(8, 145, 178, 0.15);
+}
+aside h2 {
+  color: var(--ocean-blue);
+  font-family: "Goldman", cursive;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+aside p {
+  line-height: 1.8;
+}
+aside a {
+  color: var(--ocean-blue);
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+aside a:hover {
+  color: var(--ocean-deep);
+}
+#colophon {
+  background: var(--ocean-deep);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem;
+}
+#colophon h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+#colophon a {
+  color: var(--aqua);
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+#colophon a:hover {
+  color: var(--aqua);
+}
+#colophon p {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+  </style>
+</head>
+<body>
+  <header role="banner" class="primary">
+    <h1><a href="index.html">Water</a></h1>
+    <h2>The Essential Element of Life</h2>
+    <nav role="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="types.html">Types</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="content" class="container">
+    <h2>Contact Us</h2>
+    <p>Have questions or feedback? We'd love to hear from you. Fill out the form below and we'll get back to you soon.</p>
+  </section>
+  <section id="contact-form" class="container">
+    <h2>Send a Message</h2>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+      </div>
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Send Message" class="submit-button">
+      </div>
+    </form>
+  </section>
+  <aside role="complementary">
+    <div class="container">
+      <article class="widget">
+        <header>
+          <h2>Help Those Without Clean Water</h2>
+        </header>
+        <p>
+          785 million people worldwide lack access to clean water. Learn how you can help bring safe water to communities in need by visiting <a href="https://water.org" target="_blank">Water.org</a>. Together, we can make a difference in ending the global water crisis.
+        </p>
+      </article>
+    </div>
+  </aside>
+  <footer id="colophon" role="contentinfo">
+    <h6>&copy; 2025 John Nunez | <a href="jnunez@ualr.edu">Report a Problem</a></h6>
+    <p>This website was created for educational purposes to promote water awareness.</p>
+  </footer>
+</body>
+
+</html>
