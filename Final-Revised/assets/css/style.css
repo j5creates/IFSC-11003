@@ -1,40 +1,43 @@
-/* Color Theme */
+/* ===== COLORS ===== */
 :root {
   --ocean-deep: #006994;
   --ocean-blue: #0891b2;
   --ocean-light: #06b6d4;
   --aqua: #22d3ee;
   --seafoam: #f0fdfa;
-  --white: #ffffff;
+  --white: #fff;
   --text: #0c4a6e;
   --border: #cffafe;
 }
 
-/* Reset */
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Base text */
 body {
   font-family: "lato", sans-serif;
   line-height: 1.6;
   color: var(--text);
 }
 
+/* Responsive images */
 img {
   max-width: 100%;
   display: block;
 }
 
+/* Page width */
 .container {
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-/* Header */
+/* ===== HEADER ===== */
 header.primary {
   background: linear-gradient(to bottom, var(--ocean-deep), var(--ocean-blue));
   color: var(--white);
@@ -42,18 +45,15 @@ header.primary {
   padding: 3rem 2rem;
 }
 
+/* Title link */
 header.primary h1 a {
   color: var(--white);
   text-decoration: none;
   font-size: 2.5rem;
   font-weight: 700;
-  transition: color 0.3s;
 }
 
-header.primary h1 a:hover {
-  color: var(--aqua);
-}
-
+/* Subtitle */
 header.primary h2 {
   font-family: "Goldman", cursive;
   font-size: 1.2rem;
@@ -61,7 +61,7 @@ header.primary h2 {
   font-weight: 400;
 }
 
-/* Navigation */
+/* Nav layout */
 header.primary nav ul {
   display: flex;
   justify-content: center;
@@ -70,78 +70,69 @@ header.primary nav ul {
   flex-wrap: wrap;
 }
 
+/* Nav links */
 header.primary nav a {
   color: var(--white);
   text-decoration: none;
   padding: 0.6rem 1.2rem;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 4px;
-  transition: all 0.3s;
 }
 
-header.primary nav a:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: var(--aqua);
-}
-
-/* Content Section */
-section#content {
+/* ===== MAIN CONTENT ===== */
+#content, #hero {
   padding: 3rem 0;
   background: var(--white);
 }
 
-section#content h2 {
+/* Section headings */
+#content h2, #articles h2, aside h2 {
   font-family: "Goldman", cursive;
-  color: var(--ocean-blue);
   font-size: 2rem;
-  margin-bottom: 1.5rem;
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-section#content p {
+/* Content heading color */
+#content h2 {
+  color: var(--ocean-blue);
+}
+
+/* Body text */
+#content p, aside p {
   margin-bottom: 1.5rem;
   line-height: 1.8;
 }
 
-/* Articles Section */
-section#articles {
+/* ===== ARTICLES ===== */
+#articles {
   background: var(--seafoam);
   padding: 3rem 0;
 }
 
-section#articles .container {
+/* Article grid */
+#articles .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
-
-section#articles h2 {
+/* Article heading span */
+#articles h2 {
   grid-column: 1 / -1;
-  font-family: "Goldman", cursive;
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 1rem;
   color: var(--ocean-deep);
+  margin-bottom: 1rem;
 }
 
+/* Article card */
 #articles article.post {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-#articles article.post:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(8, 145, 178, 0.2);
-}
-
-#articles article.post figure {
-  overflow: hidden;
-}
-
+/* Article image */
 #articles article.post img {
   width: 100%;
   height: 200px;
@@ -149,10 +140,12 @@ section#articles h2 {
   transition: transform 0.4s;
 }
 
+/* Image zoom */
 #articles article.post:hover img {
   transform: scale(1.08);
 }
 
+/* Image caption */
 #articles article.post figcaption {
   font-size: 0.85rem;
   color: var(--ocean-blue);
@@ -160,6 +153,7 @@ section#articles h2 {
   padding: 0.5rem 1rem;
 }
 
+/* Article title */
 #articles article.post h2 {
   font-size: 1.3rem;
   text-align: left;
@@ -167,95 +161,82 @@ section#articles h2 {
   margin: 0.5rem 0;
 }
 
+/* Article links */
 #articles article.post h2 a {
   color: var(--text);
   text-decoration: none;
-  transition: color 0.3s;
 }
 
-#articles article.post h2 a:hover {
-  color: var(--ocean-blue);
-}
-
+/* Article list */
 #articles article.post li {
   margin: 0 1.5rem 0.8rem 3rem;
   line-height: 1.6;
 }
-/* Hero Section */
-#hero {
-  padding: 3rem 0;
-  background: var(--white);
-}
 
+/* ===== HERO IMAGE ===== */
 #hero img {
   border-radius: 8px;
   margin: 0 auto;
   transition: transform 0.4s;
 }
 
+/* Hero zoom */
 #hero img:hover {
   transform: scale(1.03);
 }
 
-/* Aside Section */
+/* ===== SIDEBAR ===== */
 aside {
   background: var(--seafoam);
   padding: 3rem 0;
 }
 
+/* Sidebar layout */
 aside > div {
   display: grid;
   gap: 2rem;
 }
 
+/* Sidebar box */
 aside .widget {
   background: var(--white);
   padding: 2rem;
   border-radius: 8px;
   border: 1px solid var(--border);
-  transition: box-shadow 0.3s;
 }
 
-aside .widget:hover {
-  box-shadow: 0 4px 12px rgba(8, 145, 178, 0.15);
-}
-
+/* Sidebar heading */
 aside h2 {
   color: var(--ocean-blue);
-  font-family: "Goldman", cursive;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-aside p {
-  line-height: 1.8;
-}
-
+/* Sidebar table */
 aside table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
 }
 
+/* Table cells */
 aside table td {
   padding: 0.8rem;
   border-bottom: 1px solid var(--border);
 }
 
+/* Table label column */
 aside table td:first-child {
   font-weight: 600;
   color: var(--text);
 }
 
+/* Remove last border */
 aside table tr:last-child td {
   border-bottom: none;
 }
 
-aside table tr:hover {
-  background: var(--seafoam);
-}
-
-/* Footer */
+/* ===== FOOTER ===== */
 #colophon {
   background: var(--ocean-deep);
   color: var(--white);
@@ -263,21 +244,19 @@ aside table tr:hover {
   padding: 2rem;
 }
 
+/* Footer heading */
 #colophon h6 {
   margin-bottom: 0.5rem;
   font-weight: 400;
 }
 
+/* Footer link */
 #colophon a {
   color: var(--aqua);
   text-decoration: underline;
-  transition: color 0.3s;
 }
 
-#colophon a:hover {
-  color: var(--aqua);
-}
-
+/* Footer text */
 #colophon p {
   font-size: 0.9rem;
   margin-top: 0.5rem;

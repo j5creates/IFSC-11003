@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <style>
-/* Color Theme */
+/* Colors */
 :root {
   --ocean-deep: #006994;
   --ocean-blue: #0891b2;
@@ -21,26 +21,32 @@
   --text: #0c4a6e;
   --border: #cffafe;
 }
-/* Reset */
+
+/* Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: "lato", sans-serif;
-  line-height: 1.6;
+  font-family: 'Lato', sans-serif;
   color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
 }
+
 img {
   max-width: 100%;
   display: block;
 }
+
 .container {
   max-width: 900px;
-  margin: 0 auto;
+  margin: auto;
   padding: 2rem;
 }
+
 /* Header */
 header.primary {
   background: linear-gradient(to bottom, var(--ocean-deep), var(--ocean-blue));
@@ -48,180 +54,164 @@ header.primary {
   text-align: center;
   padding: 3rem 2rem;
 }
+
 header.primary h1 a {
   color: var(--white);
   text-decoration: none;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-weight: 700;
-  transition: color 0.3s;
 }
-header.primary h1 a:hover {
-  color: var(--aqua);
-}
+
 header.primary h2 {
-  font-family: "Goldman", cursive;
-  font-size: 1.2rem;
+  font-family: 'Goldman', cursive;
   margin: 1rem 0 2rem;
-  font-weight: 400;
+  font-size: 1.2rem;
 }
-/* Navigation */
+
 header.primary nav ul {
   display: flex;
   justify-content: center;
   gap: 1rem;
   list-style: none;
-  flex-wrap: wrap;
 }
+
 header.primary nav a {
   color: var(--white);
-  text-decoration: none;
   padding: 0.6rem 1.2rem;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.4);
   border-radius: 4px;
-  transition: all 0.3s;
 }
-header.primary nav a:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: var(--aqua);
-}
-/* Content Section */
-section#content {
-  padding: 3rem 0;
-  background: var(--white);
-}
-section#content h2 {
-  font-family: "Goldman", cursive;
-  color: var(--ocean-blue);
+
+/* Shared Section Titles */
+section h2, aside h2 {
+  font-family: 'Goldman', cursive;
   font-size: 2rem;
-  margin-bottom: 1.5rem;
   text-align: center;
-}
-section#content p {
   margin-bottom: 1.5rem;
-  line-height: 1.8;
 }
-/* Contact Form */
-#contact-form {
+
+/* Content */
+#content {
+  padding: 3rem 0;
+}
+
+#content p {
+  margin-bottom: 1.5rem;
+}
+
+/* Articles */
+#articles {
   background: var(--seafoam);
   padding: 3rem 0;
 }
-#contact-form h2 {
-  font-family: "Goldman", cursive;
-  color: var(--ocean-deep);
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 2rem;
+
+#articles .container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
-form {
+
+#articles article.post {
   background: var(--white);
-  padding: 2rem;
-  border-radius: 8px;
   border: 1px solid var(--border);
-  max-width: 600px;
-  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
 }
-.form-group {
-  margin-bottom: 1.5rem;
+
+#articles article.post img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
 }
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
+
+#articles article.post:hover img {
+  transform: scale(1.08);
+}
+
+#articles article.post h2 {
+  font-size: 1.3rem;
+  padding: 1rem 1.5rem;
+}
+
+#articles article.post h2 a {
+  text-decoration: none;
   color: var(--text);
 }
-input[type="text"],
-input[type="email"],
-textarea,
-select {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  font-family: "Lato", sans-serif;
-  font-size: 1rem;
-  transition: border-color 0.3s;
+
+#articles article.post li {
+  margin: 0 1.5rem 0.8rem 3rem;
 }
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  border-color: var(--ocean-blue);
+
+/* Hero */
+#hero {
+  padding: 3rem 0;
 }
-textarea {
-  resize: vertical;
+
+#hero img {
+  border-radius: 8px;
+  margin: auto;
+  transition: transform 0.4s;
 }
-.submit-button {
-  background: var(--ocean-blue);
-  color: var(--white);
-  padding: 0.8rem 2rem;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s;
-  width: 100%;
+
+#hero img:hover {
+  transform: scale(1.03);
 }
-.submit-button:hover {
-  background: var(--ocean-deep);
-}
-/* Aside Section */
+
+/* Sidebar */
 aside {
   background: var(--seafoam);
   padding: 3rem 0;
 }
+
 aside > div {
   display: grid;
   gap: 2rem;
 }
+
 aside .widget {
   background: var(--white);
   padding: 2rem;
   border-radius: 8px;
   border: 1px solid var(--border);
-  transition: box-shadow 0.3s;
 }
-aside .widget:hover {
-  box-shadow: 0 4px 12px rgba(8, 145, 178, 0.15);
+
+aside table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
 }
-aside h2 {
-  color: var(--ocean-blue);
-  font-family: "Goldman", cursive;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+
+aside td {
+  padding: 0.8rem;
+  border-bottom: 1px solid var(--border);
 }
-aside p {
-  line-height: 1.8;
+
+aside td:first-child {
+  font-weight: 600;
 }
-aside a {
-  color: var(--ocean-blue);
-  text-decoration: underline;
-  transition: color 0.3s;
+
+aside tr:last-child td {
+  border-bottom: none;
 }
-aside a:hover {
-  color: var(--ocean-deep);
-}
+
+/* Footer */
 #colophon {
   background: var(--ocean-deep);
   color: var(--white);
   text-align: center;
   padding: 2rem;
 }
-#colophon h6 {
-  margin-bottom: 0.5rem;
-  font-weight: 400;
-}
+
 #colophon a {
   color: var(--aqua);
   text-decoration: underline;
-  transition: color 0.3s;
 }
-#colophon a:hover {
-  color: var(--aqua);
-}
+
 #colophon p {
-  font-size: 0.9rem;
   margin-top: 0.5rem;
+  font-size: 0.9rem;
 }
   </style>
 </head>
@@ -279,5 +269,4 @@ aside a:hover {
     <p>This website was created for educational purposes to promote water awareness.</p>
   </footer>
 </body>
-
 </html>
