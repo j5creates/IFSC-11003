@@ -137,12 +137,6 @@ header.primary nav a {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  transition: transform 0.4s;
-}
-
-/* Image zoom */
-#articles article.post:hover img {
-  transform: scale(1.08);
 }
 
 /* Image caption */
@@ -177,12 +171,6 @@ header.primary nav a {
 #hero img {
   border-radius: 8px;
   margin: 0 auto;
-  transition: transform 0.4s;
-}
-
-/* Hero zoom */
-#hero img:hover {
-  transform: scale(1.03);
 }
 
 /* ===== SIDEBAR ===== */

@@ -1,3 +1,4 @@
+</html>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <style>
+    /* Colors */
 /* Colors */
 :root {
   --ocean-deep: #006994;
@@ -123,11 +125,6 @@ section h2, aside h2 {
   height: 200px;
   width: 100%;
   object-fit: cover;
-  transition: transform 0.4s;
-}
-
-#articles article.post:hover img {
-  transform: scale(1.08);
 }
 
 #articles article.post h2 {
@@ -152,11 +149,6 @@ section h2, aside h2 {
 #hero img {
   border-radius: 8px;
   margin: auto;
-  transition: transform 0.4s;
-}
-
-#hero img:hover {
-  transform: scale(1.03);
 }
 
 /* Sidebar */
@@ -196,6 +188,43 @@ aside tr:last-child td {
   border-bottom: none;
 }
 
+/* Contact Form */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submit-button {
+  background: var(--ocean-blue);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 /* Footer */
 #colophon {
   background: var(--ocean-deep);
@@ -213,7 +242,7 @@ aside tr:last-child td {
   margin-top: 0.5rem;
   font-size: 0.9rem;
 }
-  </style>
+      </style>
 </head>
 <body>
   <header role="banner" class="primary">
@@ -230,10 +259,9 @@ aside tr:last-child td {
   </header>
   <section id="content" class="container">
     <h2>Contact Us</h2>
-    <p>Have questions or feedback? We'd love to hear from you. Fill out the form below and we'll get back to you soon.</p>
+    <p></p>
   </section>
   <section id="contact-form" class="container">
-    <h2>Send a Message</h2>
     <form action="#" method="post">
       <div class="form-group">
         <label for="name">Name *</label>
